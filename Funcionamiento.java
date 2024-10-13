@@ -1,20 +1,33 @@
+//  @ Laboratorio 3
+//  @ File Name : Funcionamiento.java
+//  @ Date : 13/10/2024
+//  @ Author : Alejandro Manuel Jerez Melgar 24678
+//
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
 public class Funcionamiento {
+    //Atributos 
     private ArrayList<Producto>productos=new ArrayList<>();
     private Set<Integer> numerosGenerados;
     private Random random;
     int ventas=0;
 
+    /**
+     * Constructor
+     */
     public Funcionamiento() {
         numerosGenerados = new HashSet<>();
         random = new Random();
     }
 
     // Método para generar un número aleatorio que no se repita
+    /**
+     * 
+     * @return id int
+     */
     public int generarNumeroUnico() {
         int numero;
         // Generar números hasta encontrar uno que no esté en el set
@@ -26,14 +39,27 @@ public class Funcionamiento {
     }
 
 
+    /**
+     * 
+     * @return ArrayList<Producto>
+     */
     public ArrayList<Producto> getProductos() {
         return productos;
     }
 
+    /**
+     * 
+     * @param producto
+     */
     public void agregarProducto(Producto producto){
         productos.add(producto);
     }
 
+    /**
+     * 
+     * @param nombre String
+     * @return String
+     */
     public String mostraInfoProductoEspecifico(String nombre){
         String info="";
         for(Producto producto:productos){
@@ -45,6 +71,10 @@ public class Funcionamiento {
         return info;
     }
 
+    /**
+     * 
+     * @return Stirng
+     */
     public String mostrarInventarioProducto(){
         String libros="Libros:\n";
         String revistas="Revistas:\n";
@@ -65,6 +95,11 @@ public class Funcionamiento {
         return libros + revistas + comics;
     }
 
+    /**
+     * 
+     * @param nombre String
+     * @return boolean
+     */
     public boolean venta(String nombre){
         for(Producto producto:productos){
             if (producto.getTitulo().equals(nombre)) {
@@ -81,6 +116,10 @@ public class Funcionamiento {
         return false;
     }
 
+    /**
+     * 
+     * @return String
+     */
     public String mostrarVentas(){
         return "El total de vetnas es: " + ventas;
     }

@@ -1,8 +1,18 @@
+//  @ Laboratorio 3
+//  @ File Name : GestorLibreria.java
+//  @ Date : 13/10/2024
+//  @ Author : Alejandro Manuel Jerez Melgar 24678
+//
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 public class GestorLibreria {
-    
+ 
+    /**
+     * 
+     * @param args
+     */
     public static void main(String[] args) {
         
         Funcionamiento funcionamiento=new Funcionamiento();
@@ -61,6 +71,10 @@ public class GestorLibreria {
     }
 
 
+    /**
+     * 
+     * @return int
+     */
     public static int menu(){
         //Se inicializan las variables
         //Se crean los objetos
@@ -89,6 +103,10 @@ public class GestorLibreria {
         return eleccionUsuarioi;
 
     }
+    /**
+     * 
+     * @return String
+     */
     public static String menu2(){
         //Se inicializan las variables
         //Se crean los objetos
@@ -129,6 +147,10 @@ public class GestorLibreria {
         }
         return eleccionUsuarioS;
     }
+    /**
+     * 
+     * @return String
+     */
     public static String menu3(){
         //Se inicializan las variables
         //Se crean los objetos
@@ -167,6 +189,10 @@ public class GestorLibreria {
         return eleccionUsuarioS;
     }
 
+    /**
+     * 
+     * @return int
+     */
     public static int menu4(){
 
         Scanner teclado=new Scanner(System.in);
@@ -193,6 +219,11 @@ public class GestorLibreria {
         return eleccionUsuarioi;
     }
 
+    /**
+     * 
+     * @param accion int
+     * @return String
+     */
     public static String ingresarString(int accion){
         Scanner teclado=new Scanner(System.in);
         String datoString="";
@@ -214,8 +245,8 @@ public class GestorLibreria {
 
     /**
      * 
-     * @param accion
-     * @return
+     * @param accion int
+     * @return int
      */
     public static int ingresarint(int accion){
         Scanner teclado=new Scanner(System.in);
@@ -246,8 +277,8 @@ public class GestorLibreria {
 
     /**
      * 
-     * @param accion
-     * @return
+     * @param accion int
+     * @return float
      */
     public static float ingresarfloat(int accion){
         Scanner teclado=new Scanner(System.in);
@@ -284,7 +315,7 @@ public class GestorLibreria {
 
     /**
      * 
-     * @param funcionamiento
+     * @param funcionamiento Funcionamiento
      */
     public static void mostrarProductos(Funcionamiento funcionamiento) {
         ArrayList<Producto> productos = funcionamiento.getProductos();
@@ -296,8 +327,8 @@ public class GestorLibreria {
 
     /**
      * 
-     * @param funcionamiento
-     * @return
+     * @param funcionamiento Funcionamiento 
+     * @return String
      */
     public static String seleccionarProducto(Funcionamiento funcionamiento) {
         Scanner teclado=new Scanner(System.in);
