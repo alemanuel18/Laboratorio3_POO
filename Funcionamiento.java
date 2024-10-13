@@ -52,13 +52,13 @@ public class Funcionamiento {
         for(Producto producto : productos){
             if (producto instanceof Libro) {
                 Libro libro=(Libro)producto;
-                libros += libro.getTitulo()+"-"+libro.getId()+"Existencias: "+libro.getcDisponibles()+"\n";
+                libros += libro.getTitulo()+"-"+libro.getId()+" Existencias: "+libro.getcDisponibles()+"\n";
             }else if (producto instanceof Revista) {
                 Revista revista=(Revista)producto;
-                revistas += revista.getTitulo()+"-"+revista.getId()+"Existencias: "+revista.getcDisponibles()+"\n";
+                revistas += revista.getTitulo()+"-"+revista.getId()+" Existencias: "+revista.getcDisponibles()+"\n";
             }else if (producto instanceof Comic) {
                 Comic comic=(Comic)producto;
-                comics += comic.getTitulo()+"-"+comic.getId()+"Existencias: "+comic.getcDisponibles()+"\n";
+                comics += comic.getTitulo()+"-"+comic.getId()+" Existencias: "+comic.getcDisponibles()+"\n";
             }
         }
 

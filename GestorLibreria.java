@@ -28,17 +28,26 @@ public class GestorLibreria {
                 }
                 eleccion=menu();
             }else if (eleccion==2) {
+                if (funcionamiento.getProductos().isEmpty()) {
+                    System.out.println("No existe ningun producto");
+                }else
                 System.out.println(funcionamiento.mostraInfoProductoEspecifico(seleccionarProducto(funcionamiento)));
+
                 eleccion=menu();
             }else if (eleccion==3) {
                 System.out.println(funcionamiento.mostrarInventarioProducto());
                 eleccion=menu();
             }else if (eleccion==4) {
-                System.out.println("Que producto desea comprar");
-                if (funcionamiento.venta(seleccionarProducto(funcionamiento))==true) {
-                    System.out.println("Su compre se realizo correctamente");
-                }else
-                System.out.println("No hay existencias de este producto");
+                if (funcionamiento.getProductos().isEmpty()) {
+                    System.out.println("No existe ningun producto");
+                } else {
+                    System.out.println("Que producto desea comprar");
+                    if (funcionamiento.venta(seleccionarProducto(funcionamiento)) == true) {
+                        System.out.println("Su compra se realizo correctamente");
+                    } else
+                        System.out.println("No hay existencias de este producto");
+                }
+                
                 
                 eleccion=menu();
             }else if (eleccion==5) {
@@ -301,7 +310,7 @@ public class GestorLibreria {
 
         
         while (verificador==false) {
-            System.out.println("\nSeleccione el número del producto\n");
+            System.out.println("\nSeleccione el numero del producto\n");
             mostrarProductos(funcionamiento);
             eleccionUsuarioS=teclado.nextLine();
 
